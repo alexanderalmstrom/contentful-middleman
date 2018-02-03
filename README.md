@@ -73,7 +73,7 @@ yarn run build
 
 ## Enter Contentful API credentials
 
-Rename `.env.example` to `.env` and enter your Contentful API credentials
+Rename `.env.example` to `.env` and enter your Contentful API credentials.
 
 ##  Generate Contentful data yaml files
 
@@ -97,12 +97,19 @@ foreman start
 
 ## Deploy to Heroku
 
-Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+Create an Heroku account.
+Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
 ### Create new Heroku app
 
 ```bash
 heroku create example
+```
+
+### Add an existing Heroku app
+
+```bash
+heroku git:remote -a example
 ```
 
 ### Add buildpacks
