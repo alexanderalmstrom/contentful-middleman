@@ -1,0 +1,33 @@
+{
+  "name": "contentful-middleman",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alexander Almström <info@alexanderalmstrom.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "middleman server",
+    "build": "middleman build",
+    "server:dev": "NODE_ENV=development node dev-server",
+    "build:prod": "NODE_ENV=production webpack --bail -p",
+    "deploy": "git push heroku master"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "http-proxy-middleware": "^0.17.4",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0"
+  }
+}
