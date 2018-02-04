@@ -3,9 +3,9 @@
 
 # Contentful
 activate :contentful do |f|
-  f.space         = { space: ENV['CONTENTFUL_SPACE_ID'] }
-  f.access_token  = ENV['CONTENTFUL_ACCESS_TOKEN']
-  f.cda_query     = { content_type: 'post', include: 1 }
+  f.space = { space: ENV['CONTENTFUL_SPACE_ID'] }
+  f.access_token = ENV['CONTENTFUL_ACCESS_TOKEN']
+  f.cda_query = { content_type: 'post', include: 1 }
   f.content_types = { post: 'post' }
 end
 
