@@ -9,16 +9,8 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.3;
-
-  @include grid-media($neat-grid-md) {
-    font-size: 1.8rem;
-  }
-
-  @include grid-media($neat-grid-lg) {
-    font-size: 2rem;
-  }
 }
 
 p {
@@ -58,4 +50,23 @@ h5, .h5 {
 
 h6, .h6 {
   @include heading-6;
+}
+
+ul, ol {
+  padding: 0 0 0 2rem;
+  margin: 0 0 3rem 0;
+
+  li {
+    line-height: 1.5;
+  }
+}
+
+blockquote {
+  margin: 6rem 3rem;
+  text-align: center;
+
+  p {
+    @include heading-5;
+    font-style: italic;
+  }
 }

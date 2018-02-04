@@ -10,10 +10,10 @@
 }
 
 @mixin heading-1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
 
   @include grid-media($neat-grid-md) {
-    font-size: 5.4rem;
+    font-size: 5.5rem;
   }
 
   @include grid-media($neat-grid-lg) {
@@ -22,34 +22,22 @@
 }
 
 @mixin heading-2 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
 
   @include grid-media($neat-grid-md) {
-    font-size: 4.6rem;
+    font-size: 4rem;
   }
 
   @include grid-media($neat-grid-lg) {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
 }
 
 @mixin heading-3 {
-  font-size: 2.6rem;
+  font-size: 3rem;
 
   @include grid-media($neat-grid-md) {
-    font-size: 3.8rem;
-  }
-
-  @include grid-media($neat-grid-lg) {
-    font-size: 5rem;
-  }
-}
-
-@mixin heading-4 {
-  font-size: 2rem;
-
-  @include grid-media($neat-grid-md) {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   @include grid-media($neat-grid-lg) {
@@ -57,9 +45,23 @@
   }
 }
 
-@mixin heading-5 {
+@mixin heading-4 {
+  font-size: 2.5rem;
+
   @include grid-media($neat-grid-md) {
-    font-size: 2.2rem;
+    font-size: 3rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin heading-5 {
+  font-size: 2rem;
+
+  @include grid-media($neat-grid-md) {
+    font-size: 2.5rem;
   }
 
   @include grid-media($neat-grid-lg) {
@@ -68,5 +70,13 @@
 }
 
 @mixin heading-6 {
+  font-size: 1.6rem;
 
+  @include grid-media($neat-grid-md) {
+    font-size: 1.8rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 2rem;
+  }
 }
