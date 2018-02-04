@@ -1,5 +1,9 @@
+//
+// grid.scss
+//
+
 .container {
-  @include grid-container;
+  @include container;
 }
 
 .row {

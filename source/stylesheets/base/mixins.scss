@@ -1,0 +1,10 @@
+//
+// mixins.scss
+//
+
+@mixin container {
+  @include grid-container;
+  max-width: $grid-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,19 @@
+//
+// post.scss
+//
+
+.article-post {
+  @include container;
+  max-width: 960px;
+}
+
+.article-header {
+  @include grid-column(12);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.article-content {
+  @include grid-column(12);
+}

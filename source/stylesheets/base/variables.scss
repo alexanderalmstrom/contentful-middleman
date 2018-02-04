@@ -2,5 +2,40 @@
 // variables.scss
 //
 
+$grid-columns: 12 !default;
+$grid-gutter: 15px !default;
+$grid-max-width: 1170px !default;
+
+$neat-grid: (
+  columns: $grid-columns,
+  gutter: $grid-gutter
+);
+
+$grid-media-sm: 576px !default;
+$grid-media-md: 768px !default;
+$grid-media-lg: 992px !default;
+$grid-media-xl: 1200px !default;
+$grid-media-xxl: 1400px !default;
+
+$neat-grid-sm: (
+  media: $grid-media-sm
+);
+
+$neat-grid-md: (
+  media: $grid-media-md
+);
+
+$neat-grid-lg: (
+  media: $grid-media-lg
+);
+
+$neat-grid-xl: (
+  media: $grid-media-xl
+);
+
+$neat-grid-xxl: (
+  media: $grid-media-xxl
+);
+
 $black: #000;
 $white: #fff;

@@ -6,5 +6,14 @@
 @import 'bourbon/core/bourbon';
 @import 'bourbon-neat/core/neat';
 
+// Base
 @import './base/variables';
+@import './base/mixins';
+@import './base/grid';
 @import './base/typo';
+@import './base/global';
+
+// Layouts
+@import './layouts/header';
+@import './layouts/posts';
+@import './layouts/post';

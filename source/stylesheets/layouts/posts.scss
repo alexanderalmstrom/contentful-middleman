@@ -1,0 +1,16 @@
+//
+// posts.scss
+//
+
+
+.posts {
+  @include container;
+}
+
+.post {
+  padding: 3rem 0;
+
+  a {
+    text-decoration: none;
+  }
+}

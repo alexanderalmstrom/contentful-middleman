@@ -1,0 +1,11 @@
+//
+// global.scss
+//
+
+a {
+  color: $black;
+
+  &:hover {
+    color: rgba($black, 0.8);
+  }
+}
