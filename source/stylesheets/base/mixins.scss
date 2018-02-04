@@ -8,3 +8,65 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@mixin heading-1 {
+  font-size: 3.8rem;
+
+  @include grid-media($neat-grid-md) {
+    font-size: 5.4rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 7rem;
+  }
+}
+
+@mixin heading-2 {
+  font-size: 3.2rem;
+
+  @include grid-media($neat-grid-md) {
+    font-size: 4.6rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 6rem;
+  }
+}
+
+@mixin heading-3 {
+  font-size: 2.6rem;
+
+  @include grid-media($neat-grid-md) {
+    font-size: 3.8rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 5rem;
+  }
+}
+
+@mixin heading-4 {
+  font-size: 2rem;
+
+  @include grid-media($neat-grid-md) {
+    font-size: 3rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 4rem;
+  }
+}
+
+@mixin heading-5 {
+  @include grid-media($neat-grid-md) {
+    font-size: 2.2rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 3rem;
+  }
+}
+
+@mixin heading-6 {
+
+}

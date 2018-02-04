@@ -8,10 +8,17 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.3;
+
+  @include grid-media($neat-grid-md) {
+    font-size: 1.8rem;
+  }
+
+  @include grid-media($neat-grid-lg) {
+    font-size: 2rem;
+  }
 }
 
 p {
@@ -30,25 +37,25 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 7rem;
+  @include heading-1;
 }
 
 h2, .h2 {
-  font-size: 4.4rem;
+  @include heading-2;
 }
 
 h3, .h3 {
-  font-size: 3.6rem;
+  @include heading-3;
 }
 
 h4, .h4 {
-  font-size: 2.8rem;
+  @include heading-4;
 }
 
 h5, .h5 {
-  font-size: 2.4rem;
+  @include heading-5;
 }
 
 h6, .h6 {
-  font-size: 2rem;
+  @include heading-6;
 }
