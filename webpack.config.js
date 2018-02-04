@@ -3,6 +3,8 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
+const config = require('./index.js')
+
 const env = process.env.NODE_ENV
 
 const webpackConfig = {
@@ -25,6 +27,7 @@ const webpackConfig = {
   ],
 
   resolve: {
+    extensions: ['.scss', '.js', '.css', '.json'],
     modules: [
       path.resolve(__dirname, 'source/stylesheets'),
       path.resolve(__dirname, 'source/javascripts'),
@@ -88,7 +91,8 @@ if (env == 'development') {
         {
           loader: 'sass-loader',
           options: {
-            sourceMap: true
+            sourceMap: true,
+            includePaths: config.paths
           }
         }
       ]
@@ -125,7 +129,10 @@ if (env == 'production') {
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              includePaths: config.paths
+            }
           }
         ]
       })

@@ -1,8 +1,10 @@
-html {
-  -webkit-font-smoothing: antialiased;
-}
+//
+// application.css.scss
+//
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', sans-serif;
-}
+@import 'normalize.css/normalize';
+@import 'bourbon/core/bourbon';
+@import 'bourbon-neat/core/neat';
+
+@import './base/variables';
+@import './base/typo';

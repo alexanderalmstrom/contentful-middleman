@@ -1,0 +1,26 @@
+.container {
+  @include grid-container;
+}
+
+.row {
+  @include grid-container;
+  @include grid-collapse;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include grid-column(12);
+
+    @include grid-media($neat-grid-md) {
+      @include grid-column($i);
+    }
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .push-#{$i} {
+    @include grid-media($neat-grid-md) {
+      @include grid-push($i);
+    }
+  }
+}

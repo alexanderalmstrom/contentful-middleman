@@ -9,9 +9,10 @@ activate :contentful do |f|
   f.content_types = { post: 'post' }
 end
 
+# Generate posts from data directory
 if Dir.exist?(File.join(config.data_dir, 'space'))
   data.space.post.each do |id, post|
-    proxy "/#{post.slug}/index.html", "post.html", :layout => "layout", locals: { post: post }, ignore: true
+    proxy "/#{post.slug}/index.html", "post.html", locals: { post: post }, ignore: true
   end
 end
 

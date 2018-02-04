@@ -1,6 +1,8 @@
----
-title: "Home"
----
+//
+// index.html.slim
+//
+
+- content_for :title, "Home"
 
 .posts
   - data.space.post.each do |id, post|

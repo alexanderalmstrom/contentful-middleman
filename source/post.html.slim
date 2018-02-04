@@ -1,3 +1,11 @@
+//
+// post.html.slim
+//
+
 - content_for :title, post.name
 
-h1 = post.name
+article.article-post
+  header.article-header
+    h1 = post.name
+  section.article-content
+    = Kramdown::Document.new(post.content).to_html
