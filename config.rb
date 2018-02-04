@@ -9,12 +9,16 @@ activate :contentful do |f|
   f.content_types = { post: 'post' }
 end
 
+if Dir.exist?(File.join(config.data_dir, 'space'))
+  data.space.post.each do |id, post|
+    proxy "/#{post.slug}/index.html", "post.html", :layout => "layout", locals: { post: post }, ignore: true
+  end
+end
+
 # Development
 configure :development do
-  set :debug_assets, true
-
   # Output a pretty html
-  ::Slim::Engine.set_options :pretty => true
+::Slim::Engine.set_options :pretty => true
 end
 
 # Build

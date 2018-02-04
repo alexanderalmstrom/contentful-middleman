@@ -1,4 +1,4 @@
 meta charset='utf-8'
-title = current_page.data.title || "Contentful Middleman"
+title = content_for?(:title) ? yield_content(:title) : current_page.data.title
 - if build?
   = stylesheet_link_tag 'application.bundle.css'
