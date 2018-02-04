@@ -24,3 +24,6 @@ gem 'middleman-minify-html', '~> 3.4'
 
 # Contentful Middleman
 gem 'contentful_middleman', '~> 4.0'
+
+# Slim template engine
+gem 'slim', '~> 3.0'

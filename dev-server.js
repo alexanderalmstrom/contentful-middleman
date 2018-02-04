@@ -1,40 +1,16 @@
+const webpackDevServer = require('webpack-dev-server')
 const webpack = require('webpack')
-const express = require('express')
-const http = require('http')
-const proxyMiddleware = require('http-proxy-middleware')
-
 const webpackConfig = require('./webpack.config')
-const devConfig = webpackConfig.devServer
-const compiler = webpack(webpackConfig)
 
-const app = express()
-const server = http.createServer(app)
+const config = require('./webpack.config.js')
 
-app.use(require("webpack-dev-middleware")(compiler, {
-  noInfo: true,
-  publicPath: webpackConfig.output.publicPath
-}))
+const PORT = webpackConfig.devServer.port || 5000
 
-app.use(require("webpack-hot-middleware")(compiler, {
-  log: console.log,
-  path: '/__webpack_hmr',
-  heartbeat: 10 * 1000
-}))
+webpackDevServer.addDevServerEntrypoints(config, webpackConfig.devServer)
 
-if (devConfig.proxy) {
-  Object.keys(devConfig.proxy).forEach(function(context) {
-    app.use(proxyMiddleware(context, devConfig.proxy[context]))
-  })
-}
+const compiler = webpack(config)
+const server = new webpackDevServer(compiler, webpackConfig.devServer)
 
-if (devConfig.historyApiFallback) {
-  console.log('404 responses will be forwarded to /index.html')
-
-  app.get('*', function(req, res) {
-    res.sendFile(path.resolve(devConfig.contentBase, 'index.html'))
-  })
-}
-
-server.listen(process.env.PORT || 5000, function() {
-  console.log("Listening on port %s", server.address().port)
+server.listen(PORT, 'localhost', () => {
+  console.log('Server listening on port %s', PORT)
 })

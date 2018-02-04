@@ -1,0 +1,9 @@
+---
+title: Contentful Middleman
+---
+
+.posts
+  - data.space.post.each do |id, post|
+    .post
+      h2 = post.name
+      = Kramdown::Document.new(post['content']).to_html

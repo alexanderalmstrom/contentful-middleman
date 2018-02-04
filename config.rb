@@ -1,3 +1,6 @@
+# Slim template engine
+::Slim::Engine.set_options :format  => :html
+
 # Contentful
 activate :contentful do |f|
   f.space         = { space: ENV['CONTENTFUL_SPACE_ID'] }
@@ -8,7 +11,10 @@ end
 
 # Development
 configure :development do
-  
+  set :debug_assets, true
+
+  # Output a pretty html
+  ::Slim::Engine.set_options :pretty => true
 end
 
 # Build
@@ -23,10 +29,11 @@ configure :build do
   activate :minify_html
 end
 
+# Webpack asset pipeline
 if (build? or server?)
   activate :external_pipeline,
     name: :webpack,
-    command: build? ? 'yarn run build:prod' : 'yarn run server:dev',
+    command: build? ? 'yarn run build:prod' : 'yarn run server',
     source: ".tmp/dist",
     latency: 1
 end

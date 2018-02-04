@@ -7,9 +7,12 @@ const env = process.env.NODE_ENV
 
 const webpackConfig = {
   devServer: {
+    hot: true,
     port: 5000,
-    contentBase: 'build/',
+    contentBase: path.resolve(__dirname, 'source'),
+    watchContentBase: false,
     historyApiFallback: false,
+    host: 'localhost',
     proxy: {
       '**': {
         target: 'http://localhost:4567'
@@ -56,6 +59,10 @@ const webpackConfig = {
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ]
 }
@@ -64,7 +71,7 @@ if (env == 'development') {
   webpackConfig.entry.unshift(
     'webpack-hot-middleware/client'
   )
-
+  
   webpackConfig.module.rules.push(
     {
       test: /\.scss$/,
@@ -92,7 +99,8 @@ if (env == 'development') {
     new CleanWebpackPlugin([
       path.resolve(__dirname, '.tmp')
     ]),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
   )
 }
 

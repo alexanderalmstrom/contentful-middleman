@@ -1,10 +1,11 @@
+// application.js
+
 import 'babel-polyfill'
 import 'application.css.scss'
 
-// application.js
+import './layouts/header'
 
-(function() {
-  'use strict'
-
-  console.log('application.js')
-}())
+// Enable hot module reloading
+if (module.hot) {
+  module.hot.accept()
+}
