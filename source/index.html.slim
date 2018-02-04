@@ -9,4 +9,3 @@
     .post
       a href="/#{post.slug}"
         h2 = post.name
-        = Kramdown::Document.new(post.content).to_html
