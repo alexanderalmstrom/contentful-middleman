@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const config = require('./index.js')
-
 const env = process.env.NODE_ENV
 
 const webpackConfig = {
@@ -70,6 +69,7 @@ const webpackConfig = {
   ]
 }
 
+// Development
 if (env == 'development') {
   webpackConfig.entry.unshift(
     'webpack-hot-middleware/client'
@@ -108,6 +108,7 @@ if (env == 'development') {
   )
 }
 
+// Production
 if (env == 'production') {
   webpackConfig.module.rules.push(
     {
