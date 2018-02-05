@@ -3,8 +3,12 @@
 //
 
 header#header
+  #brand
+    a href="/" Contentful Middleman
   - data.space.menu.each do |id, menu|
     - if id == "KYzWsUFpuwquc8iAyAaIA"
-      nav#nav
-        - menu.links.each do |link|
-          = link_to "#{link.name}", "#{link.url}"
+      nav#menu
+        ul
+          - menu.links.each do |link|
+            li
+              = link_to "#{link.name}", "#{link.url}"

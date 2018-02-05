@@ -8,5 +8,6 @@ html.no-js lang="#{I18n.locale}"
     = partial '/shared/head'
   body
     = partial '/shared/header'
-    = yield
+    main#main
+      = yield
     = partial '/shared/footer'

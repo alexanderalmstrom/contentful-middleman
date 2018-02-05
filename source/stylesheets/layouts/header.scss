@@ -3,5 +3,35 @@
 //
 
 header#header {
-  
+  @include grid-container;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#brand {
+  @include grid-column(6);
+
+  a {
+    padding: 1.5rem 0;
+    display: block;
+  }
+}
+
+#menu {
+  @include grid-column(6);
+
+  ul {
+    float: right;
+  }
+
+  li {
+    margin-left: 1.5rem;
+  }
+
+  a {
+    padding: 1.5rem 0;
+    display: block;
+  }
 }
