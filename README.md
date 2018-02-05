@@ -1,5 +1,7 @@
 # Contentful Middleman
 
+This is a demo project setup of [Middleman](https://middlemanapp.com/) (static site generator), [Contentful](https://www.contentful.com/) (API based CMS) together with [Webpack](https://webpack.js.org/) (Static module bundler).
+
 ## Requirements
 
 - [Homebrew](https://brew.sh/)
