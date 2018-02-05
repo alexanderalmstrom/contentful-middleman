@@ -1,0 +1,77 @@
+//
+// button.scss
+//
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: $grey;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    background: darken($grey, 5%);
+    color: $black;
+  }
+}
+
+.btn-primary {
+  background: $blue;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    background: darken($blue, 5%);
+  }
+}
+
+.btn-secondary {
+  background: $black;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    background: lighten($black, 10%);
+  }
+}
+
+.btn-outlined {
+  background: $white;
+  color: $grey;
+  border: 1px solid $grey;
+
+  &:hover {
+    background: $white;
+    color: $dark-grey;
+    border-color: $dark-grey;
+  }
+
+  &.btn-primary {
+    border-color: $blue;
+    color: $blue;
+
+    &:hover {
+      border-color: darken($blue, 10%);
+      color: darken($blue, 10%);
+    }
+  }
+
+  &.btn-secondary {
+    border-color: $black;
+    color: $black;
+
+    &:hover {
+      border-color: lighten($black, 10%);
+      color: lighten($black, 10%);
+    }
+  }
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+}
+
+.btn-lg {
+  font-size: 2.2rem;
+}
