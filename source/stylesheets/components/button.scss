@@ -5,9 +5,11 @@
 .btn {
   display: inline-block;
   padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
   background: $grey;
   color: $black;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover {
     background: darken($grey, 5%);
