@@ -140,3 +140,9 @@ yarn run deploy
 ```
 
 or connect to GitHub under `Deploy > Deployment method` and select your branch to do a manual deploy.
+
+### Open your Heroku application in browser
+
+```bash
+heroku open
+```
