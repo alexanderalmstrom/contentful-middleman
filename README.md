@@ -78,7 +78,7 @@ Rename `.env.example` to `.env` and enter your Contentful API credentials.
 ##  Generate Contentful data yaml files
 
 ```bash
-middleman contentful
+yarn run contentful
 ```
 
 ## Run local production server
@@ -121,10 +121,17 @@ heroku buildpacks:add heroku/nodejs --index 1
 
 ### Heroku config variables
 
-Add your `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` to Settings > Config Variables in Heroku.
+```bash
+heroku config:set CONTENTFUL_SPACE_ID=space_id
+heroku config:set CONTENTFUL_ACCESS_TOKEN=access_token
+```
+
+You can also add your `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` under `Settings > Config Variables` in your Heroku application.
 
 ### Run deploy
 
 ```bash
 yarn run deploy
 ```
+
+or connect to GitHub under `Deploy > Deployment method` and select your branch to do a manual deploy.
