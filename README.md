@@ -2,9 +2,14 @@
 
 ## Requirements
 
-- RVM or/with Ruby 2.4.3 installed.
+- Yarn
+- Node (preferably with NVM)
+- Ruby 2.4.3 installed (preferably with RVM)
 - Bundler gem
 - Middleman gem
+- Foreman gem
+
+You will find a simplified installation instruction below for Ruby and nessesary Ruby gems. I refer to each project documentation if any issues occurs during setup.
 
 ## Features
 
@@ -13,7 +18,7 @@
 - Bundle JS and SCSS files with webpack (overrides Middleman asset pipeline)
 - Deployment with Heroku (Heroku CLI)
 
-## Installation
+## Setup
 
 ### Install RVM (Ruby Version Manager)
 
@@ -97,8 +102,8 @@ foreman start
 
 ## Deploy to Heroku
 
-Create an Heroku account.
-Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+- Create an Heroku account. [Heroku homepage](https://www.heroku.com/)
+- Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
 ### Create new Heroku app
 
