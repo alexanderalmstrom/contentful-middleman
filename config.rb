@@ -5,15 +5,24 @@
 activate :contentful do |f|
   f.space = { space: ENV['CONTENTFUL_SPACE_ID'] }
   f.access_token = ENV['CONTENTFUL_ACCESS_TOKEN']
-  f.cda_query = { content_type: 'post', include: 1 }
-  f.content_types = { post: 'post' }
+  f.content_types = {
+    page: 'page',
+    post: 'post',
+    menu: 'menu'
+  }
   f.use_preview_api = ENV['RACK_ENV'] == 'production' ? false : true
 end
 
 # Generate posts from data directory
 if Dir.exist?(File.join(config.data_dir, 'space'))
+  data.space.page.each do |id, page|
+    proxy "/#{page.slug}/index.html", "page.html", locals: { page: page }, ignore: true
+  end
+end
+
+if Dir.exist?(File.join(config.data_dir, 'space'))
   data.space.post.each do |id, post|
-    proxy "/#{post.slug}/index.html", "post.html", locals: { post: post }, ignore: true
+    proxy "/article/#{post.slug}/index.html", "post.html", locals: { post: post }, ignore: true
   end
 end
 

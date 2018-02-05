@@ -8,4 +8,5 @@ article.article-post
   header.article-header
     h1 = post.name
   section.article-content
-    = Kramdown::Document.new(post.content).to_html
+    - if post.content
+      = Kramdown::Document.new(post.content).to_html

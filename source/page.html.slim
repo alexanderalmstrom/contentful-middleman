@@ -1,0 +1,12 @@
+//
+// page.html.slim
+//
+
+- content_for :title, page.name
+
+article.article-post
+  header.article-header
+    h1 = page.name
+  section.article-content
+    - if page.content
+      = Kramdown::Document.new(page.content).to_html
