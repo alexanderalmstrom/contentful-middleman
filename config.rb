@@ -24,6 +24,12 @@ end
 
 # Build
 configure :build do
+  ignore '*/.keep'
+  ignore 'layouts/*'
+  ignore 'shared/*'
+  ignore 'javascripts/*/*'
+  ignore 'stylesheets/*/*'
+
   # Use relative URLs
   activate :directory_indexes
 
