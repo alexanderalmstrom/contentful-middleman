@@ -2,14 +2,15 @@
 
 ## Requirements
 
-- Yarn
-- Node (preferably with NVM)
+- [Homebrew](https://brew.sh/)
+- [Yarn](https://yarnpkg.com/)
+- Node 8.9.4 (preferably with [NVM](https://github.com/creationix/nvm))
 - Ruby 2.4.3 installed (preferably with RVM)
 - Bundler gem
 - Middleman gem
 - Foreman gem
 
-You will find a simplified installation instruction below for Ruby and nessesary Ruby gems. I refer to each project documentation if any issues occurs during setup.
+You will find a simplified installation instruction below for Homebrew, NVM, RVM and Ruby gems. I refer to each project documentation if any issues occurs during the setup. Ignore the first steps if you already have the requirements (Homebrew, Yarn, Node and Ruby) installed.
 
 ## Features
 
@@ -17,8 +18,46 @@ You will find a simplified installation instruction below for Ruby and nessesary
 - Webpack hot middleware (hot module reloading, HMR)
 - Bundle JS and SCSS files with webpack (overrides Middleman asset pipeline)
 - Deployment with Heroku (Heroku CLI)
+- Bourbon (Sass tool set) [https://www.bourbon.io/](https://www.bourbon.io/)
+- Bourbon Neat (Sass grid) [https://neat.bourbon.io/](https://neat.bourbon.io/)
 
 ## Setup
+
+### Install Homebrew
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### Install Yarn
+
+```bash
+brew install yarn
+```
+
+### Install NVM
+
+```bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+```
+
+### Install Node
+
+```bash
+nvm install 8.9.4
+```
+
+### Set Node version
+
+```bash
+nvm use v8.9.4
+```
+
+### Check Node version
+
+```bash
+node -v
+```
 
 ### Install RVM (Ruby Version Manager)
 
@@ -32,19 +71,19 @@ You will find a simplified installation instruction below for Ruby and nessesary
 rvm install 2.4.3
 ```
 
-### Set ruby version
+### Set Ruby version
 
 ```bash
 rvm use 2.4.3
 ```
 
-### Check ruby version
+### Check Ruby version
 
 ```bash
 ruby -v
 ```
 
-### Install bundler and gems
+### Install Bundler and gems
 
 ```bash
 gem install bundler
@@ -54,7 +93,7 @@ gem install bundler
 bundle install
 ```
 
-### Install middleman
+### Install Middleman
 
 ```bash
 gem install middleman
@@ -94,7 +133,7 @@ yarn run contentful
 gem install foreman
 ```
 
-### Start foreman
+### Start Foreman
 
 ```bash
 foreman start
