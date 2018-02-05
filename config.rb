@@ -7,7 +7,7 @@ activate :contentful do |f|
   f.access_token = ENV['CONTENTFUL_ACCESS_TOKEN']
   f.cda_query = { content_type: 'post', include: 1 }
   f.content_types = { post: 'post' }
-  f.use_preview_api = server? ? true : false
+  f.use_preview_api = ENV['RACK_ENV'] == 'production' ? false : true
 end
 
 # Generate posts from data directory
