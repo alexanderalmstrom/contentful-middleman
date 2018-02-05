@@ -1,11 +1,15 @@
+//
+// header.js
+//
+
 class Header {
   constructor () {
+    console.log('header.js')
+
     $(window).on('scroll', function () {
       console.log('scroll')
     })
   }
 }
-
-new Header()
 
 export default Header
