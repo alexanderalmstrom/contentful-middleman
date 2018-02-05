@@ -5,7 +5,7 @@
 - [Homebrew](https://brew.sh/)
 - [Yarn](https://yarnpkg.com/)
 - Node 8.9.4 (preferably with [NVM](https://github.com/creationix/nvm))
-- Ruby 2.4.3 installed (preferably with RVM)
+- Ruby 2.4.3 installed (preferably with [RVM](https://rvm.io/))
 - Bundler gem
 - Middleman gem
 - Foreman gem
