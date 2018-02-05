@@ -19,7 +19,7 @@ end
 # Development
 configure :development do
   # Output a pretty html
-::Slim::Engine.set_options :pretty => true
+  ::Slim::Engine.set_options :pretty => true
 end
 
 # Build
@@ -31,7 +31,7 @@ configure :build do
   activate :asset_hash
 
   # Minify html
-  activate :minify_html
+  activate :minify_html, remove_quotes: false, remove_input_attributes: false
 end
 
 # Webpack asset pipeline
