@@ -2,21 +2,42 @@
 // post.scss
 //
 
-.article-post {
-  @include container;
+.single-post {
+
 }
 
-.article-header {
-  @include grid-column(12);
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  text-align: center;
+.post-header {
+  position: relative;
+  margin-top: -$header-height;
 
   h1 {
     margin-bottom: 0;
   }
 }
 
-.article-content {
+.post-header-image {
+  @include background-image;
+}
+
+.post-header-inner {
+  @include container;
+  @include align-middle;
+
+  padding-left: 6%;
+  padding-right: 6%;
+  text-align: center;
+  color: $white;
+}
+
+.post-content {
+  @include container;
+
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.post-content-inner {
   @include grid-column(12);
 }
