@@ -4,5 +4,6 @@
 
 meta charset='utf-8'
 title = content_for?(:title) ? yield_content(:title) : current_page.data.title
+meta content='initial-scale=1, user-scalable=yes, width=device-width' name='viewport'
 - if build?
   = stylesheet_link_tag 'application.bundle.css'
