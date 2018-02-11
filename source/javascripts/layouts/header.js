@@ -18,7 +18,7 @@ const Header = (($) => {
     if (!Selector.BODY.hasClass('single'))
       return
 
-    if (currentScroll > Selector.POST_HEADER.outerHeight()) {
+    if (currentScroll > Selector.POST_HEADER.outerHeight() - (Selector.HEADER.outerHeight() / 2)) {
       Selector.HTML.addClass('state--scrolled')
     } else {
       Selector.HTML.removeClass('state--scrolled')
