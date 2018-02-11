@@ -14,6 +14,7 @@
   font-weight: $btn-font-weight;
   border-radius: $btn-border-radius;
   transition: $btn-transition;
+  cursor: $btn-cursor;
 
   &:hover {
     background: $btn-default-background-hover;

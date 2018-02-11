@@ -6,7 +6,7 @@ doctype html
 html.no-js lang="#{I18n.locale}"
   head
     = partial '/shared/head'
-  body
+  body class="#{yield_content(:body_class)}"
     = partial '/shared/header'
     main#main
       = yield

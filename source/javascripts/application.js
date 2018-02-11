@@ -11,11 +11,10 @@ import Form from './components/form'
 import Button from './components/button'
 
 // Layouts
-import Header from './layouts/header'
+import './layouts/header'
 
 new Form()
 new Button()
-new Header()
 
 // Enable hot module reloading
 if (module.hot) {

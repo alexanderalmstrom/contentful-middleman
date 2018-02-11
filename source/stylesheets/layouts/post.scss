@@ -2,6 +2,22 @@
 // post.scss
 //
 
+.single {
+  #header {
+    a {
+      color: $white;
+    }
+
+    .state--scrolled & {
+      color: inherit;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
 .single-post {
 
 }
