@@ -2,6 +2,8 @@
 // variables.scss
 //
 
+// Grid
+
 $grid-columns: 12 !default;
 $grid-gutter: 15px !default;
 $grid-max-width: 1170px !default;
@@ -16,6 +18,8 @@ $grid-media-md: 768px !default;
 $grid-media-lg: 992px !default;
 $grid-media-xl: 1200px !default;
 $grid-media-xxl: 1400px !default;
+
+// Grid media
 
 $neat-grid-sm: (
   media: $grid-media-sm
@@ -37,11 +41,56 @@ $neat-grid-xxl: (
   media: $grid-media-xxl
 );
 
+// Colors
+
 $black: #000;
 $white: #fff;
-$grey: #ccc;
+$grey: #eee;
 $dark-grey: #999;
 $darker-grey: #666;
 $blue: #1555CC;
+
+// Buttons
+
+$btn-padding-x: 1.4rem;
+$btn-padding-y: 1rem;
+$btn-margin-bottom: 1rem;
+$btn-font-size: 1.8rem;
+$btn-font-weight: normal;
+$btn-text-decoration: none;
+$btn-border-radius: 0.3rem;
+$btn-transition: background 0.3s, color 0.3s, border 0.3s;
+
+$btn-default-background: $grey;
+$btn-default-color: $dark-grey;
+$btn-default-background-hover: darken($btn-default-background, 5%);
+$btn-default-color-hover: $btn-default-color;
+
+$btn-primary-background: $blue;
+$btn-primary-color: $white;
+$btn-primary-background-hover: darken($btn-primary-background, 5%);
+$btn-primary-color-hover: $btn-primary-color;
+
+$btn-secondary-background: $black;
+$btn-secondary-color: $white;
+$btn-secondary-background-hover: lighten($btn-secondary-background, 10%);
+$btn-secondary-color-hover: $btn-secondary-color;
+
+$btn-outlined-background: darken($grey, 30%);
+$btn-outlined-color: darken($grey, 30%);
+$btn-outlined-background-hover: darken($btn-outlined-background, 10%);
+$btn-outlined-color-hover: darken($btn-outlined-color, 10%);
+
+$btn-primary-outlined-background: $blue;
+$btn-primary-outlined-color: $blue;
+$btn-primary-outlined-background-hover: darken($btn-primary-outlined-background, 20%);;
+$btn-primary-outlined-color-hover: darken($btn-primary-outlined-color, 20%);
+
+$btn-secondary-outlined-background: $black;
+$btn-secondary-outlined-color: $black;
+$btn-secondary-outlined-background-hover: lighten($btn-secondary-outlined-background, 20%);
+$btn-secondary-outlined-color-hover: lighten($btn-secondary-outlined-color, 20%);
+
+// Layouts
 
 $header-height: 5.3rem;

@@ -143,7 +143,7 @@ foreman start
 
 ## Deploy to Heroku
 
-- Create an Heroku account. [Heroku homepage](https://www.heroku.com/)
+- Create Heroku account. [Heroku homepage](https://www.heroku.com/)
 - Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
 ### Create new Heroku app

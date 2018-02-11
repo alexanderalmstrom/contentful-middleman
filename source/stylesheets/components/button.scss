@@ -4,76 +4,91 @@
 
 .btn {
   display: inline-block;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  background: $grey;
-  color: $black;
-  text-decoration: none;
-  font-weight: bold;
+  border: 1px solid transparent;
+  background: $btn-default-background;
+  color: $btn-default-color;
+  padding: $btn-padding-y $btn-padding-x;
+  margin-bottom: $btn-margin-bottom;
+  font-size: $btn-font-size;
+  text-decoration: $btn-text-decoration;
+  font-weight: $btn-font-weight;
+  border-radius: $btn-border-radius;
+  transition: $btn-transition;
 
   &:hover {
-    background: darken($grey, 5%);
-    color: $black;
+    background: $btn-default-background-hover;
+    color: $btn-default-color-hover;
   }
 }
 
 .btn-primary {
-  background: $blue;
-  color: $white;
+  background: $btn-primary-background;
+  color: $btn-primary-color;
 
   &:hover {
-    color: $white;
-    background: darken($blue, 5%);
+    background: $btn-primary-background-hover;
+    color: $btn-primary-color-hover;
   }
 }
 
 .btn-secondary {
-  background: $black;
-  color: $white;
+  background: $btn-secondary-background;
+  color: $btn-secondary-color;
 
   &:hover {
-    color: $white;
-    background: lighten($black, 10%);
+    background: $btn-secondary-background-hover;
+    color: $btn-secondary-color-hover;
   }
 }
 
 .btn-outlined {
-  background: $white;
-  color: $grey;
-  border: 1px solid $grey;
+  background: transparent;
+  color: $btn-outlined-color;
+  border-color: $btn-outlined-background;
 
   &:hover {
-    background: $white;
-    color: $dark-grey;
-    border-color: $dark-grey;
+    background: transparent;
+    color: $btn-outlined-color-hover;
+    border-color: $btn-outlined-background-hover;
   }
 
   &.btn-primary {
-    border-color: $blue;
-    color: $blue;
+    border-color: $btn-primary-outlined-background;
+    color: $btn-primary-outlined-color;
 
     &:hover {
-      border-color: darken($blue, 10%);
-      color: darken($blue, 10%);
+      border-color: $btn-primary-outlined-background-hover;
+      color: $btn-primary-outlined-color-hover;
     }
   }
 
   &.btn-secondary {
-    border-color: $black;
-    color: $black;
+    border-color: $btn-secondary-outlined-background;
+    color: $btn-secondary-outlined-color;
 
     &:hover {
-      border-color: lighten($black, 10%);
-      color: lighten($black, 10%);
+      border-color: $btn-secondary-outlined-background-hover;
+      color: $btn-secondary-outlined-color-hover;
     }
   }
 }
 
+.btn-xs {
+  padding: 0.6rem 1rem;
+  font-size: 1.4rem;
+}
+
 .btn-sm {
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.2rem;
   font-size: 1.6rem;
 }
 
 .btn-lg {
+  padding: 1.2rem 1.6rem;
   font-size: 2.2rem;
+}
+
+.btn-xl {
+  padding: 1.4rem 1.8rem;
+  font-size: 2.4rem;
 }

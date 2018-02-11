@@ -26,6 +26,8 @@ if Dir.exist?(File.join(config.data_dir, 'space'))
   end
 end
 
+proxy "/styleguide/index.html", "styleguide.html"
+
 # Development
 configure :development do
   # Output a pretty html
