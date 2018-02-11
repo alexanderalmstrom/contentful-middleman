@@ -45,7 +45,8 @@ $neat-grid-xxl: (
 
 $black: #000;
 $white: #fff;
-$grey: #eee;
+$light-grey: #eee;
+$grey: #ccc;
 $dark-grey: #999;
 $darker-grey: #666;
 $blue: #1555CC;
@@ -63,7 +64,7 @@ $btn-transition: background 0.3s, color 0.3s, border 0.3s;
 $btn-cursor: pointer;
 
 $btn-default-background: $grey;
-$btn-default-color: $dark-grey;
+$btn-default-color: $white;
 $btn-default-background-hover: darken($btn-default-background, 5%);
 $btn-default-color-hover: $btn-default-color;
 
@@ -91,6 +92,10 @@ $btn-secondary-outlined-background: $black;
 $btn-secondary-outlined-color: $black;
 $btn-secondary-outlined-background-hover: lighten($btn-secondary-outlined-background, 20%);
 $btn-secondary-outlined-color-hover: lighten($btn-secondary-outlined-color, 20%);
+
+$btn-disabled-background: $light-grey;
+$btn-disabled-color: $grey;
+$btn-disabled-cursor: default;
 
 $btn-xs-padding-y: 0.6rem;
 $btn-xs-padding-x: 1rem;

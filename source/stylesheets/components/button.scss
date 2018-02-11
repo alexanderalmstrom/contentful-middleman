@@ -74,6 +74,20 @@
   }
 }
 
+// Button states
+
+button:disabled,
+button:disabled:hover,
+.btn.is-disabled,
+.btn.is-disabled:hover {
+  background: $btn-disabled-background;
+  color: $btn-disabled-color;
+  cursor: $btn-disabled-cursor;
+  pointer-events: none;
+}
+
+// Button sizes
+
 .btn-xs {
   padding: $btn-xs-padding-y $btn-xs-padding-x;
   font-size: $btn-xs-font-size;
