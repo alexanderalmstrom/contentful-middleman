@@ -5,6 +5,7 @@
 .btn {
   display: inline-block;
   border: 1px solid transparent;
+  appearance: none;
   background: $btn-default-background;
   color: $btn-default-color;
   padding: $btn-padding-y $btn-padding-x;

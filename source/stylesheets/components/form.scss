@@ -13,10 +13,14 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="search"] {
   display: inline-block;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: $input-padding-y $input-padding-x;
+  margin-bottom: $input-margin-bottom;
+  appearance: none;
+  border: $input-border;
+  border-radius: $input-border-radius;
 }
 
 input[type="checkbox"],
@@ -32,4 +36,5 @@ input[type="radio"] {
 button,
 input[type="submit"] {
   margin-bottom: 1rem;
+  appearance: none;
 }

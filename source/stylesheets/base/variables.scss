@@ -51,6 +51,8 @@ $dark-grey: #999;
 $darker-grey: #666;
 $blue: #1555CC;
 
+$border-radius: 0.3rem;
+
 // Buttons
 
 $btn-padding-x: 1.4rem;
@@ -59,7 +61,7 @@ $btn-margin-bottom: 1rem;
 $btn-font-size: 1.8rem;
 $btn-font-weight: normal;
 $btn-text-decoration: none;
-$btn-border-radius: 0.3rem;
+$btn-border-radius: $border-radius;
 $btn-transition: background 0.3s, color 0.3s, border 0.3s;
 $btn-cursor: pointer;
 
@@ -112,6 +114,14 @@ $btn-lg-font-size: 2.2rem;
 $btn-xl-padding-y: 1.4rem;
 $btn-xl-padding-x: 1.8rem;
 $btn-xl-font-size: 2.4rem;
+
+// Inputs
+
+$input-padding-y: 1rem;
+$input-padding-x: 1rem;
+$input-margin-bottom: 1.5rem;
+$input-border: 1px solid $black;
+$input-border-radius: $border-radius;
 
 // Layouts
 
