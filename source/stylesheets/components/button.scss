@@ -75,21 +75,21 @@
 }
 
 .btn-xs {
-  padding: 0.6rem 1rem;
-  font-size: 1.4rem;
+  padding: $btn-xs-padding-y $btn-xs-padding-x;
+  font-size: $btn-xs-font-size;
 }
 
 .btn-sm {
-  padding: 0.8rem 1.2rem;
-  font-size: 1.6rem;
+  padding: $btn-sm-padding-y $btn-sm-padding-x;
+  font-size: $btn-sm-font-size;
 }
 
 .btn-lg {
-  padding: 1.2rem 1.6rem;
-  font-size: 2.2rem;
+  padding: $btn-lg-padding-y $btn-lg-padding-x;
+  font-size: $btn-lg-font-size;
 }
 
 .btn-xl {
-  padding: 1.4rem 1.8rem;
-  font-size: 2.4rem;
+  padding: $btn-xl-padding-y $btn-xl-padding-x;
+  font-size: $btn-xl-font-size;
 }

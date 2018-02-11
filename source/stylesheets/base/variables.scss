@@ -92,6 +92,22 @@ $btn-secondary-outlined-color: $black;
 $btn-secondary-outlined-background-hover: lighten($btn-secondary-outlined-background, 20%);
 $btn-secondary-outlined-color-hover: lighten($btn-secondary-outlined-color, 20%);
 
+$btn-xs-padding-y: 0.6rem;
+$btn-xs-padding-x: 1rem;
+$btn-xs-font-size: 1.4rem;
+
+$btn-sm-padding-y: 0.8rem;
+$btn-sm-padding-x: 1.2rem;
+$btn-sm-font-size: 1.6rem;
+
+$btn-lg-padding-y: 1.2rem;
+$btn-lg-padding-x: 1.6rem;
+$btn-lg-font-size: 2.2rem;
+
+$btn-xl-padding-y: 1.4rem;
+$btn-xl-padding-x: 1.8rem;
+$btn-xl-font-size: 2.4rem;
+
 // Layouts
 
 $header-height: 5.3rem;
