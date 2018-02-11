@@ -4,17 +4,15 @@
 
 nav {
   ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include list-unstyled;
+  }
 
-    li {
-      display: inline-block;
-      vertical-align: middle;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-      a {
-        text-decoration: none;
-      }
-    }
+  a {
+    text-decoration: none;
   }
 }
