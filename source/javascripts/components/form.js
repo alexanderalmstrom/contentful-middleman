@@ -10,7 +10,7 @@ class Form {
   }
 
   init () {
-    console.log('init form.js')
+    
   }
 }
 

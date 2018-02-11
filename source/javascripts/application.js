@@ -10,11 +10,11 @@ import 'application.css.scss'
 import Form from './components/form'
 import Button from './components/button'
 
-// Layouts
-import './layouts/header'
-
 new Form()
 new Button()
+
+// Layouts
+import './layouts/header'
 
 // Enable hot module reloading
 if (module.hot) {
