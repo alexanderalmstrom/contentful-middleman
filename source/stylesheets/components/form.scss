@@ -16,9 +16,9 @@ input[type="email"],
 input[type="tel"],
 input[type="search"] {
   display: inline-block;
+  appearance: none;
   padding: $input-padding-y $input-padding-x;
   margin-bottom: $input-margin-bottom;
-  appearance: none;
   border: $input-border;
   border-radius: $input-border-radius;
 }
