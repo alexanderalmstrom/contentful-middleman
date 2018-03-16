@@ -7,7 +7,7 @@ const Header = (($) => {
     HTML: $('html'),
     BODY: $('body'),
     HEADER: $('#header'),
-    POST_HEADER: $('.post-header')
+    POST_HEADER: $('.post-header-container')
   }
 
   let currentScroll = 0

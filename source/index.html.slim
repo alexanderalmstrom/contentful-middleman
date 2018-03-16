@@ -7,6 +7,7 @@
 .posts
   - data.space.post.each do |id, post|
     .post
-      a href="/article/#{post.slug}"
-        img src="#{post.image.url}?q=60&w=720"
+      a.post-link href="/article/#{post.slug}"
+        - if post.image
+          .post-image style="background-image: url(#{post.image.url}?q=60&w=720)"
         h2.h3 = post.name

@@ -22,9 +22,10 @@
 
 }
 
-.post-header {
+.post-header-container {
   position: relative;
   margin-top: -$header-height;
+  background: $black;
 
   h1 {
     margin-bottom: 0;
@@ -35,7 +36,7 @@
   @include background-image;
 }
 
-.post-header-inner {
+.post-header-content {
   @include container;
   @include align-middle;
 
@@ -45,7 +46,7 @@
   color: $white;
 }
 
-.post-content {
+.post-section-container {
   @include container;
 
   padding-top: 6rem;
@@ -54,6 +55,11 @@
   padding-right: 6%;
 }
 
-.post-content-inner {
+.post-section-content {
   @include grid-column(12);
+
+  @include grid-media($neat-grid-md) {
+    @include grid-column(8);
+    @include grid-push(2);
+  }
 }

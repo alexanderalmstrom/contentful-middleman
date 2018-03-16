@@ -6,11 +6,12 @@
 - content_for :title, post.name
 
 article.single-post
-  header.post-header
-    .post-header-image style="background-image: url(#{post.image.url}?q=60&w=1920)"
-    .post-header-inner
+  header.post-header-container
+    - if post.image
+      .post-header-image style="background-image: url(#{post.image.url}?q=60&w=1920)"
+    .post-header-content
       h1 = post.name
   - if post.content
-    section.post-content
-      .post-content-inner
+    section.post-section-container
+      .post-section-content
         = Kramdown::Document.new(post.content).to_html

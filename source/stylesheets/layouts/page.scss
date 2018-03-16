@@ -3,5 +3,21 @@
 //
 
 .single-page {
+
+}
+
+.page-header-container {
   @include container;
+}
+
+.page-header-content {
+  @include grid-column(12);
+}
+
+.page-section-container {
+  @include container;
+}
+
+.page-section-content {
+  @include grid-column(12);
 }

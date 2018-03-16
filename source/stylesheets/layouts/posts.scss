@@ -18,9 +18,15 @@
   @include grid-media($neat-grid-lg) {
     @include grid-column(4);
   }
+}
 
-  a {
-    display: block;
-    text-decoration: none;
-  }
+.post-link {
+  display: block;
+  text-decoration: none;
+}
+
+.post-image {
+  @include background-image;
+  background-color: $black;
+  margin-bottom: $spacer;
 }
